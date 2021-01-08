@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjw.system.mapper.RoleOperatorMapper">
+  <resultMap id="BaseResultMap" type="com.cjw.system.model.RoleOperator">
+    <!--@mbg.generated-->
+    <!--@Table role_operator-->
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="operator_id" jdbcType="INTEGER" property="operatorId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    role_id, operator_id
+  </sql>
+
+  <insert id="insertRoleOperators">
+    insert into role_operator
+    (role_id, operator_id) values
+    <foreach collection="operatorIds" item="operatorId" index="index" separator=",">
+      (#{roleId},#{operatorId})
+    </foreach>
+    </insert>
+</mapper>

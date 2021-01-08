@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjw.system.mapper.OperatorMapper">
+  <resultMap id="BaseResultMap" type="com.cjw.system.model.Operator">
+    <!--@mbg.generated-->
+    <!--@Table `operator`-->
+    <id column="operator_id" jdbcType="INTEGER" property="operatorId" />
+    <result column="menu_id" jdbcType="INTEGER" property="menuId" />
+    <result column="operator_name" jdbcType="VARCHAR" property="operatorName" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="perms" jdbcType="VARCHAR" property="perms" />
+    <result column="http_method" jdbcType="VARCHAR" property="httpMethod" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    operator_id, menu_id, operator_name, url, perms, http_method, create_time, modify_time
+  </sql>
+</mapper>

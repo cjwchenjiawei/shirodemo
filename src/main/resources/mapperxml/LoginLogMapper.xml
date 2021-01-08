@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cjw.system.mapper.LoginLogMapper">
+  <resultMap id="BaseResultMap" type="com.cjw.system.model.LoginLog">
+    <!--@mbg.generated-->
+    <!--@Table login_log-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="login_status" jdbcType="CHAR" property="loginStatus" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, login_time, username, login_status, ip
+  </sql>
+</mapper>
